@@ -1,0 +1,623 @@
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1140px;
+        padding: 0 15px;
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 992px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero {
+        padding: 130px 0 80px;
+    }
+    
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+    
+    /* Footer adjustments */
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 140px;
+    }
+
+    header {
+        position: relative;
+        top: 0;
+        background: rgba(28, 111, 184, 0.92);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+        border-radius: 20px;
+        margin: 0 10px;
+        padding: 10px 18px;
+    }
+
+    header .container {
+        padding: 0;
+    }
+
+    /* Navigation */
+    .navbar {
+        position: relative;
+        padding: 15px 0;
+        gap: 16px;
+    }
+    
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        transform: translateY(-10px);
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+        z-index: 1000;
+        margin: 0;
+    }
+    
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-links li {
+        margin: 10px 0;
+    }
+    
+    .nav-links a {
+        padding: 10px 20px;
+        display: block;
+        color: var(--secondary-color);
+    }
+    
+    .nav-links a::after {
+        background-color: var(--primary-color);
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+    .logo h2 {
+        color: var(--white);
+        font-size: 1.8rem;
+    }
+    
+    .btn-download-cv {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    /* Top contact bar */
+    .top-bar .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .top-bar-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .top-bar-left span {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    .top-bar-right {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .top-bar-right a {
+        margin: 0;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 120px 0 60px;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.15rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .btn {
+        width: 200px;
+        text-align: center;
+    }
+    
+    /* Section padding adjustments */
+    .about, .skills, .services, .contact, .social {
+        padding: 70px 0;
+    }
+
+    .about-content {
+        gap: 40px;
+    }
+
+    /* Services grid */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .service-card {
+        padding: 30px 20px;
+        max-width: 220px;
+    }
+    
+    /* Social links */
+    .social-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .social-link {
+        width: 44px;
+        height: 44px;
+    }
+    
+    /* Footer */
+    .footer-inner {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+        text-align: center;
+    }
+
+    .footer-text {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .section-title::after {
+        width: 60px;
+    }
+    
+    .btn-download-cv {
+        padding: 10px 18px;
+        font-size: 0.95rem;
+    }
+    
+    /* About Section */
+    .about-text p {
+        font-size: 1rem;
+        text-align: justify;
+    }
+    
+    /* Skills Section */
+    .skills-container {
+        margin: 0;
+    }
+    
+    .skill-item {
+        margin-bottom: 25px;
+    }
+    
+    .skill-info {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .skill-info span:last-child {
+        align-self: flex-end;
+        font-size: 0.9rem;
+    }
+    
+    .skill-bar {
+        height: 32px;
+    }
+    
+    .skill-progress {
+        padding-left: 12px;
+        font-size: 0.8rem;
+    }
+    
+    /* Contact Section */
+    .contact-info h3 {
+        font-size: 1.3rem;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .contact-icon {
+        align-self: center;
+    }
+    
+    .social-links-mini {
+        justify-content: center;
+    }
+    
+    /* Logo */
+    .logo h2 {
+        font-size: 1.3rem;
+    }
+    
+    /* Download CV button in nav */
+    .btn-download-cv {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Typography */
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .section-title::after {
+        width: 60px;
+    }
+    
+    /* Hero Section */
+    .hero {
+        padding: 100px 0 50px;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.05rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    /* About Section */
+    .about-text p {
+        font-size: 1rem;
+        text-align: left;
+    }
+    
+    /* Skills Section */
+    .skills-container {
+        margin: 0;
+    }
+    
+    .skill-item {
+        margin-bottom: 25px;
+    }
+    
+    .skill-info {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .skill-info span:last-child {
+        align-self: flex-end;
+        font-size: 0.9rem;
+    }
+    
+    /* Contact Section */
+    .contact-info h3 {
+        font-size: 1.3rem;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .contact-icon {
+        align-self: center;
+    }
+    
+    .social-links-mini {
+        justify-content: center;
+    }
+    
+    /* Logo */
+    .logo h2 {
+        font-size: 1.3rem;
+    }
+    
+    /* Download CV button in nav */
+    .btn-download-cv {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    /* Footer */
+    .footer-bottom p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .footer-text {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: 1.7rem;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .social-link {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+/* Special responsive cases for very small screens */
+@media (max-width: 320px) {
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .service-card {
+        max-width: 200px;
+        padding: 20px 10px;
+    }
+    
+    .contact-details .contact-item {
+        margin-bottom: 20px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .hero-buttons,
+    .social,
+    .contact-form-container,
+    footer {
+        display: none !important;
+    }
+    
+    .hero {
+        background: none !important;
+        color: #000 !important;
+        padding: 50px 0 !important;
+    }
+    
+    .hero h1,
+    .hero h2 {
+        color: #000 !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    .section-title::after {
+        background: #000 !important;
+    }
+}
+
+/* High DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero {
+        background-attachment: fixed;
+    }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    /* This provides a basic dark mode foundation */
+    body {
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+    }
+    
+    .about,
+    .services,
+    .contact-form-container,
+    .service-card {
+        background-color: #2d2d2d;
+    }
+    
+    .skills,
+    .contact {
+        background-color: #252525;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: #ffffff;
+    }
+}
+
+/* Landscape orientation for mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        padding: 100px 0 50px;
+        min-height: auto;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+    
+    .nav-links {
+        max-height: 200px;
+        overflow-y: auto;
+    }
+}
+
+/* Very large screens */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .hero h1 {
+        font-size: 4rem;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+    
+    .service-card {
+        padding: 50px 30px;
+    }
+}

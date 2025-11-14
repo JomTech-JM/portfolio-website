@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Hire Me - Contact Form</title>
+</head>
+<body class="modal-form-body">
+    <section class="modal-form">
+        <h2>Let's Work Together</h2>
+        <p>Fill in the form below and I'll respond as soon as possible.</p>
+        <form id="modalContactForm" class="contact-form">
+            <div class="form-group">
+                <label for="modal-name">Full Name *</label>
+                <input type="text" id="modal-name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="modal-email">Email Address *</label>
+                <input type="email" id="modal-email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="modal-service">Service Interested In</label>
+                <select id="modal-service" name="service">
+                    <option value="">Select a service</option>
+                    <option value="consultation">Consultation</option>
+                    <option value="digital-marketing">Digital Marketing</option>
+                    <option value="comptia">Android Mobile App Development</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="seo">UI/UX Design</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="modal-message">Project Details *</label>
+                <textarea id="modal-message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">
+                <span class="btn-text">Send Message</span>
+                <div class="btn-loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                </div>
+            </button>
+
+            <div id="modalFormMessage" class="form-message"></div>
+        </form>
+    </section>
+
+    <script>
+        const modalForm = document.getElementById('modalContactForm');
+        const modalMessage = document.getElementById('modalFormMessage');
+        const submitBtn = modalForm.querySelector('button[type="submit"]');
+
+        modalForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            submitBtn.classList.add('sending');
+            submitBtn.disabled = true;
+            modalMessage.textContent = '';
+            modalMessage.className = 'form-message';
+
+            setTimeout(() => {
+                modalMessage.textContent = 'Thank you! I will get back to you soon.';
+                modalMessage.classList.add('success');
+                submitBtn.classList.remove('sending');
+                submitBtn.disabled = false;
+                modalForm.reset();
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
